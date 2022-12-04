@@ -78,7 +78,7 @@ app.post('/test', async (req: Request, res: Response) => {
 
     const gmail = google.gmail({version: 'v1', auth: authorization});
 
-    const data = await gmail.users.watch({
+    const {data} = await gmail.users.watch({
         userId: 'me',
         requestBody: {
             labelIds: ['INBOX'],
@@ -86,16 +86,7 @@ app.post('/test', async (req: Request, res: Response) => {
         }
     })
 
-    console.log('========================')
     console.log(data)
-    console.log('========================')
-
-
-    console.log('Push notification')
-
-    console.log(req.body)
-    console.log(req.query)
-    console.log(req.params)
 
 })
 
