@@ -19,6 +19,8 @@ app.get('/test', (req: Request, res: Response) => {
 
 app.post('/test', (req: Request, res: Response) => {
 
+    console.log('Push notification')
+
     console.log(req.body)
     console.log(req.query)
     console.log(req.params)
