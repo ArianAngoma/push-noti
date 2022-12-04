@@ -1,4 +1,9 @@
 import express, {Request, Response} from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config()
+
+const port = process.env.PORT || 8081;
 
 const app = express();
 
@@ -20,5 +25,7 @@ app.post('/test', (req: Request, res: Response) => {
 
 })
 
-app.listen()
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
 
