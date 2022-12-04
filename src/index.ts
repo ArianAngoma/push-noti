@@ -8,6 +8,8 @@ app.get('/test', (req: Request, res: Response) => {
     console.log(req.query)
     console.log(req.params)
 
+    res.json({message: 'Hello World!'})
+
 })
 
 app.post('/test', (req: Request, res: Response) => {
