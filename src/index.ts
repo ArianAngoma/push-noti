@@ -70,7 +70,7 @@ app.get('/test', (req: Request, res: Response) => {
 
 app.post('/test', async (req: Request, res: Response) => {
 
-    const authorization = gsuiteConnectionUtility({
+    /*const authorization = gsuiteConnectionUtility({
         primaryEmail: environment.gsuite.primaryEmail,
         scopes: environment.gsuite.scopes,
         credentials: environment.gsuite.key
@@ -84,7 +84,7 @@ app.post('/test', async (req: Request, res: Response) => {
             labelIds: ['INBOX'],
             topicName: 'projects/wise-philosophy-347014/topics/TestAssemblyFlowTopic'
         }
-    })
+    })*/
 
     // console.log(data)
 
